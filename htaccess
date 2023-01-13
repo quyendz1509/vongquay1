@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteBase /
+# Chuyển hướng
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+ErrorDocument 404 /views/404.php
+ErrorDocument 505 /views/505.php
+# kết thúc
+RewriteRule home.html$ ?ctrl=home [L]
+RewriteRule dangky.html$ ?ctrl=dangky [L]
+RewriteRule dangnhap.html$ ?ctrl=dangnhap [L]
+RewriteRule naptien.html$ ?ctrl=naptien [L]
+RewriteRule giaodich.html$ ?ctrl=giaodich [L]
+RewriteRule logout$ ?ctrl=logout [L]
