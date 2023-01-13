@@ -11,10 +11,13 @@
 				<!-- firt item -->
 				<form id="login" action="" class="flex-col flex w-full lg:w-10/12">
 					<div class="relative w-full my-3">
+						<label for="username" class=" text-slate-500 font-bold">Tài khoản</label>
 						<input type="text" name="username" placeholder="Tên đăng nhập..."  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5" autocomplete="true">
 						<label for="username" class="error text-sm text-rose-500"></label>
 					</div>
 					<div class="relative w-full my-3">
+						<label for="password" class=" text-slate-500 font-bold">Mật khẩu</label>
+
 						<input type="password" name="password" placeholder="Mật khẩu..."  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5">
 						<label for="password" class="error text-sm text-rose-500"></label>
 					</div>
@@ -30,6 +33,9 @@
 						<button id="btn-send-auth" class="flex w-full justify-center items-center group py-2 px-3 bg-sky-500 text-white text-sm font-semibold rounded-md hover:shadow-lg disabled:hover:shadow-none disabled:bg-slate-800 hover:shadow-sky-500/50 ease-in duration-150  flex self-center gap-1 uppercase">Tiếp tục <svg class="w-0 group-hover:w-4 ease-in duration-150 group-hover:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
 						</svg></button>
+					</div>
+					<div class="relative text-center">
+						<p class="text-sm font-semibold">Chưa có tài khoản ? <a class="text-green-500 hover:text-green-400" href="./dangky.html">Đăng ký ngay.</a></p>
 					</div>
 				</form>
 

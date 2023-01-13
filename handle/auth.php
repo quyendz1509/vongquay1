@@ -20,46 +20,26 @@ if (isset($_POST['key']) && $_POST) {
 		$fullname = htmlspecialchars(trim(strtoupper($_POST['fullname'])));
 		$username = htmlspecialchars(trim($_POST['username']));
 		$password = htmlspecialchars(trim($_POST['password']));
-		$email = htmlspecialchars(trim($_POST['email']));
-		$phone = htmlspecialchars(trim($_POST['phone']));
-	$captcha = $_POST['g-recaptcha-response'];
+		
 
-		if(!$captcha){
-			$erro = array( 'status' => -1, 'messages' => 'Vui lòng xác nhận captcha');
-		}
-		else if(empty($fullname) || empty($username) || empty($password) || empty($email)){
+	 if(empty($fullname) || empty($username) || empty($password)){
 			$erro = array( 'status' => -1, 'messages' => 'Không bỏ trống thông tin.');
 		}else if(strlen($password) < 6 || strlen($password) > 24 ){
 			$erro = array( 'status' => -1, 'messages' => 'Mật khẩu tối thiểu 6 ký tự và tối đa 24 ký tự');
 		}else if(strlen($username) < 6 || strlen($username) > 24 ){
 			$erro = array( 'status' => -1, 'messages' => 'Mật khẩu tối thiểu 6 ký tự và tối đa 24 ký tự');
-		}else if(strlen($phone) > 11){
-			$erro = array( 'status' => -1, 'messages' => 'Số điện thoại tối đa 11 ký tự');
 		}
-		else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$erro = array( 'status' => -1, 'messages' => 'Email không hợp lệ' );
-		}else if($auth->check_google_account($username)){
+		else if($auth->check_google_account($username)){
 			$erro = array( 'status' => -1, 'messages' => 'Tài khoản đã tồn tại trên hệ thống.' );
-		}else if($auth->get_info_by_email($email)){
-			$erro = array( 'status' => -1, 'messages' => 'Đã tồn tại email trên hệ thống.' );
 		}else{
-			$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LcT32MdAAAAAOWAL0Y1AVp4ASrt2RKLIzUcBng0&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-			$obj_res = json_decode($response);
-			if(!$obj_res->success){
-				$erro = array( 'status' => -1, 'messages' => 'Vui lòng không spam !' );
-			}else{
 				$token = bin2hex(random_bytes(36));
-				if (empty($phone)) {
-					$newPhone = NULL;
-				}else{
-					$newPhone = $phone;
-				}
+				
 				$hashPass = md5($password);
-				$auth->create_user($username,$hashPass,$email,0,$token,$fullname,$newPhone);
+				$auth->create_user($username,$hashPass,1,$token,$fullname);
 
 				$_SESSION['id'] = $auth->check_google_account($username)['id'];
 				$erro = array('status' => 99 , 'messages' =>'Đăng ký thành viên thành công !');
-			}
+			
 		}
 		
 

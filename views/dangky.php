@@ -13,51 +13,41 @@
 				<form id="register" action="" class="flex-col flex w-full lg:w-10/12">
 					<!--  -->
 					<div class="relative w-full my-3">
+						<label for="fullname" class=" text-slate-500 font-bold">Họ và tên</label>
+
 						<input type="text" name="fullname" placeholder="* Họ và tên"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" autocomplete="true">
 						<label for="fullname" class="error text-sm text-rose-500"></label>
 					</div>
 					<!--  -->
 					<!--  -->
 					<div class="relative w-full my-3">
+						<label for="username" class=" text-slate-500 font-bold">Tài khoản</label>
+
 						<input type="text" name="username" placeholder="* Tài khoản"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" autocomplete="true">
 						<label for="username" class="error text-sm text-rose-500"></label>
 					</div>
 					<!--  -->
 					<div class="relative w-full my-3">
-						<div class="flex grid grid-cols-2 gap-2">
-							<div>
-								<input type="password" id="password" name="password" placeholder="* Mật khẩu"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
-								<label for="password" class="error text-sm text-rose-500"></label>
-							</div>
-							<div>
-								<input type="password" name="password" placeholder="* Xác nhận mật khẩu"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
-								<label for="password" class="error text-sm text-rose-500"></label>
-							</div>
-						</div>
+						<label for="password" class=" text-slate-500 font-bold">Mật khẩu</label>
+						
+
+							<input type="password" id="password" name="password" placeholder="* Mật khẩu"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
+							<label for="password" class="error text-sm text-rose-500"></label>
+						
 					</div>
-					<!--  -->
 					<div class="relative w-full my-3">
-						<input type="email" name="email" placeholder="* Địa chỉ email"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
-						<label for="email" class="error text-sm text-rose-500"></label>
-					</div>
-					<!--  -->
-					<div class="relative w-full my-3">
-						<input type="number" name="phone" placeholder="Điện thoại"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
-						<label for="phone" class="error text-sm text-rose-500"></label>
-					</div>
+						<label for="username" class=" text-slate-500 font-bold">Xác nhận mật khẩu</label>
 
-					<div class="relative w-full my-3">
-
-						<div class="g-recaptcha w-full" data-sitekey="6LcT32MdAAAAAIjN__avjyDVQiBso1aCb-9jTEls"></div>
-
+						
+							<input type="password" name="repassword" placeholder="* Xác nhận mật khẩu"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
+							<label for="repassword" class="error text-sm text-rose-500"></label>
+						
+						
 					</div>
-					<div class="flex justify-between mb-3">
-						<div class="flex items-center">
-							<input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-emerald-600 bg-gray-100 rounded focus:ring-0 ">
-							<label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 text-gray-400">Chấp nhận <a href="" class="text-emerald-600">điều khoản sử dụng</a>.</label>
-						</div>
+				
+				
 
-					</div>
+				
 					<div class="relative w-full">
 						<p class="bg-slate-100 text-rose-500 rounded-lg text-center font-semibold text-sm" id="alert-error">
 							
@@ -69,20 +59,12 @@
 						</svg></button>
 					</div>
 				</form>
-				<div class="flex flex-col w-full lg:w-10/12">
-					<div class="relative w-full mb-3">
+				
+					<div class="relative w-full mb-3 text-center">
 						<p class="text-sm font-semibold">Đã có tài khoản ? <a class="text-sky-500 hover:text-sky-400" href="./dangnhap.html">Đăng nhập ngay.</a></p>
 					</div>
-					<hr class="custom-divider my-3">
-					<div class="flex justify-center mt-3 gap-2">
-						<button class="border rounded-md px-5 py-1 flex self-center gap-1 items-center justify-center hover:bg-slate-100">
-							<img src="./public/resource/facebook.svg" class="w-5" alt=""> Facebook
-						</button>
-						<button class="border rounded-md px-5 py-1 flex self-center gap-1 items-center justify-center hover:bg-slate-100">
-							<img src="./public/resource/google.svg" class="w-4" alt=""> Google
-						</button>
-					</div>
-				</div>
+		
+				
 
 			</div>
 		</div>
@@ -124,21 +106,6 @@
 					minlength: 6,
 					maxlength: 24,
 					equalTo: '#password'
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				phone: {
-					phoneVN: true,
-					maxlength: 11,
-					number: true
-				},
-				captcha: {
-					required: true,
-					maxlength: 4,
-					minlength: 4,
-					number: true
 				}
 
 			},
@@ -163,21 +130,6 @@
 					minlength: 'Tối thiểu 6 ký tự.',
 					maxlength: 'Tối đa 24 ký tự.',
 					equalTo: 'Mật khẩu không trùng khớp.'
-				},
-				email:{
-					required: 'Không bỏ trống thông tin.',
-					email: 'Email không đúng định dạng.'
-				},
-				phone: {
-					phoneVN: 'Số điện thoại phải có đầu số là 0 hoặc 84.',
-					maxlength: 'Số điện thoại phải là 11 ký tự.',
-					number: 'Số điện thoại phải là chữ số'
-				},
-				captcha: {
-					required: 'Vui lòng nhập mã xác thực.',
-					maxlength: 'Mã xác thực không chính xác',
-					minlength: 'Mã xác thực không chính xác',
-					number: 'Mã xác  thực không chính xác',
 				}
 			}
 		})
@@ -191,15 +143,13 @@
 			let fullname = $(this).find('input[name="fullname"]').val();
 			let username = $(this).find('input[name="username"]').val();
 			let password = $(this).find('input[name="password"]').val();
-			let email = $(this).find('input[name="email"]').val();
-			let phone = $(this).find('input[name="phone"]').val();
-			let captcha = grecaptcha.getResponse();
+			
 
 			$.ajax({
 				url: '/handle/auth.php',
 				type: 'POST',
 				method: 'POST',
-				data: {fullname:fullname, username: username, password: password, email: email, phone: phone,  'g-recaptcha-response': captcha,key: 0},
+				data: {fullname:fullname, username: username, password: password,key: 0},
 				beforeSend: ()=>{
 					$('#btn-send-auth').html('Loading...').attr('disabled', '');
 					$('input').attr('disabled','true');

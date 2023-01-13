@@ -21,9 +21,9 @@ class classAuth extends DATABASE
        return $this->pdo_query_one($sql,$id_account);
    }
  // create account normal
-   function create_user($username,$password,$email,$coin,$token,$fullname,$phone){
-    $sql = 'INSERT INTO `accounts`(`username`,`password`,`email`,`coin`,`token`,`fullname`,`phone`) VALUES(?,?,?,?,?,?,?)';
-    $this->pdo_execute($sql,$username,$password,$email,$coin,$token,$fullname,$phone);
+   function create_user($username,$password,$coin,$token,$fullname){
+    $sql = 'INSERT INTO `accounts`(`username`,`password`,`coin`,`token`,`fullname`) VALUES(?,?,?,?,?)';
+    $this->pdo_execute($sql,$username,$password,$coin,$token,$fullname);
 }
  // update token
 function update_user($token,$username){
