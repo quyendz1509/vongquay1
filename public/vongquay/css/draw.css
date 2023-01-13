@@ -1,0 +1,89 @@
+/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+.abso-center {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.abso-center-y {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 20%;
+}
+
+.bg {
+  width: 100%;
+}
+.imgtitle{
+  width: 50%;
+  position: absolute;
+  top: 11%;
+}
+.imgbox{
+  width: 86%;
+  display: block;
+  position: absolute;
+  top: 22%;
+}
+.imgstart{
+  width: 36%;
+  display: block;
+  position: absolute;
+  top: 90%;
+  z-index: 99;
+  cursor: pointer;
+}
+.imgstart img{
+  width: 100%;
+}
+
+#draw_container {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 76%;
+}
+
+#draw_container > ul {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#draw_container > ul > li {
+  position: relative;
+  width: 28%;
+  margin-bottom: 4%;
+  background: #302859;
+  border-radius: 15px;
+}
+#draw_container > ul > li > img {
+  width: 100%;
+  display: block;
+}
+#lucky-whele li .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../images/draw-xz.png) no-repeat;
+  background-size: cover;
+  display: none;
+}
+#lucky-whele .active .mask {
+  display: block;
+}

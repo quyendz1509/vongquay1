@@ -1,0 +1,23 @@
+RewriteEngine on
+RewriteRule home$ ?ctrl=home [L]
+RewriteRule quanlyweb$ ?ctrl=quanlyweb [L]
+RewriteRule hinhanh$ ?ctrl=hinhanh [L]
+RewriteRule gamelist$ ?ctrl=gamelist [L]
+RewriteRule payment$ ?ctrl=payment [L]
+RewriteRule user$ ?ctrl=user [L]
+RewriteRule mua-ban$ ?ctrl=muaban [L]
+RewriteRule thongke$ ?ctrl=thongke [L]
+RewriteRule admin-log$ ?ctrl=admin-log [L]
+RewriteRule managerHisAuto$ ?ctrl=managerHisAuto [L]
+RewriteRule giftcode$ ?ctrl=giftcode [L]
+RewriteRule categogries$ ?ctrl=categogries [L]
+RewriteRule products/(.*)$ ?ctrl=products&cate=$1 [L]
+RewriteRule editHack/(.*)$ ?ctrl=edit-hack&id=$1 [L]
+RewriteRule editPack/(.*)$ ?ctrl=edit-pack&id=$1 [L]
+RewriteRule key/(.*)$ ?ctrl=key&id=$1 [L]
+RewriteRule pack/(.*)$ ?ctrl=pack&id=$1 [L]
+RewriteRule manager-bank/(.*)$ ?ctrl=manager-bank&id=$1 [L]
+RewriteRule activer/(.*)$ ?ctrl=activer&id=$1 [L]
+RewriteRule momoDetail/(.*)-(.*)$ ?ctrl=momoDetail&transid=$1&id=$2 [L]
+
+

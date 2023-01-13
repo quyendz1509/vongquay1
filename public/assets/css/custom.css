@@ -1,0 +1,20 @@
+.custom-divider{
+	margin-bottom: 10px;
+	padding: 0;
+	overflow: visible;
+	border: none;
+	border-top: 1px solid #e0e0e0;
+	color: #6e6d7a;
+	text-align: center;
+	position: relative;
+}
+.custom-divider:after{
+	content: 'Hoặc';
+	display: inline-block;
+	position: absolute;
+	top: -7px;
+	left: 50%;
+	transform: translate(-50%,-7px);
+	padding: 0 18px;
+	background: #fff;
+}

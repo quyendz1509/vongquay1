@@ -1,0 +1,38 @@
+*{
+	padding:  0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#lucky-whel ul{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 0 !important;
+}
+#lucky-whel ul li{
+	list-style-type: none;
+	text-align: center;
+	position: relative;	
+	
+}
+
+.text_{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: -24px;
+}
+
+#lucky-whel .mask {
+    width: 124px;
+    height: 124px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url(../images/draw-xz.png) no-repeat;
+    background-size: cover;
+     display: none; 
+    transform: translate(-50%, -50%);
+}
+#lucky-whel .active .mask{
+	display: block;
+}
